@@ -1,0 +1,25 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.5
+version = '1.0'
+
+repositories {
+   jcenter()
+}
+
+dependencies {
+	compile 'org.quartz-scheduler:quartz:2.2.1'
+    testCompile 'junit:junit:4.12'
+}
+
+test {
+}
+
+uploadArchives {
+    repositories {
+       flatDir {
+           dirs 'repos'
+       }
+    }
+}
